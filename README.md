@@ -120,6 +120,13 @@ This project provides a Python script that:
 - Removes only the problematic `<a>` wrappers
 - Preserves all other content
 
+#### Usage 
+---
+    python fix_epub_toc_links.py input.epub
+    python fix_epub_toc_links.py input.epub -o output.epub
+    python fix_epub_toc_links.py input.epub --in-place
+    python fix_epub_toc_links.py input.epub --dry-run
+
 ---
 
 ### 5. Real-World Issue Encountered
