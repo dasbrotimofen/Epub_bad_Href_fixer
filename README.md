@@ -122,7 +122,21 @@ This project provides a Python script that:
 
 ---
 
-### 5. Alternative: Replace the EPUB
+### 5. Real-World Issue Encountered
+
+During development, some EPUB files could not be processed because:
+
+- The EPUB (ZIP container) contained filenames with non-UTF-8 encoding (e.g. Chinese characters)
+- Standard tools like Python’s `zipfile` and even 7-Zip failed with decoding or header errors
+
+**Solution:**
+
+- Running a simple **EPUB → EPUB conversion in Calibre** fixed the container structure
+- After that, the script worked correctly and was able to clean the book
+
+---
+
+### 6. Alternative: Replace the EPUB
 
 If the file is heavily broken:
 
@@ -147,6 +161,13 @@ If the file is heavily broken:
 ## Notes
 
 Some EPUBs may contain additional structural issues (e.g. malformed ZIP containers or encoding problems), which require repair before editing.
+
+---
+
+## Credits
+
+- The cleanup script was generated with the help of ChatGPT
+- Debugging and refinement were done based on real-world EPUB issues
 
 ---
 
